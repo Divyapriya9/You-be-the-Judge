@@ -1,0 +1,29 @@
+{
+"id":"case-001","no":"007","title":"The Hospital Parking Fine",
+"facts":["At 2:10 a.m., Priya, a night-shift nurse, was called back to the hospital for an emergency.","The staff car park was full, so she left her car in a marked no-parking zone by the side entrance.","She was fined. She appealed, saying the emergency left her no choice."],
+"parties":[{"name":"Priya","role":"night nurse","wants":"the fine cancelled"},{"name":"City Parking Authority","role":"issued the fine","wants":"rules enforced the same way for everyone"}],
+"evidence":[
+{"id":"e1","label":"Hospital call log","reliability":"high","text":"Shows Priya was paged at 2:04 a.m. and logged in at 2:19 a.m."},
+{"id":"e2","label":"Camera timestamps","reliability":"high","text":"Her car was in the zone from 2:11 to 5:40 a.m."},
+{"id":"e3","label":"A neighbour’s remark","reliability":"low","text":"“She parks there most nights.” The neighbour has never worked a shift with her."}],
+"rules":["Parking in a marked no-parking zone carries a fine.","The Authority may cancel a fine if the driver proves a genuine emergency."],
+"rulings":[
+{"id":"r1","text":"Uphold the fine","tree":{"label":"Fine upheld","detail":"You apply the rule exactly as written.","children":[
+ {"label":"Priya pays the fine","affected":"individual","valence":-1,"likelihood":"high","detail":"She pays, and feels punished for doing her job.","children":[
+  {"label":"Staff stop answering night calls from home","affected":"institution","valence":-2,"likelihood":"medium","detail":"Some staff decide a possible fine isn’t worth the risk.","children":[
+   {"label":"Emergency response slows","affected":"community","valence":-2,"likelihood":"medium","detail":"Fewer staff reach the hospital quickly at night."}]}]},
+ {"label":"The rule is seen to apply to everyone","affected":"institution","valence":1,"likelihood":"high","detail":"Drivers see no favouritism.","children":[
+  {"label":"Fewer false emergency claims","affected":"institution","valence":1,"likelihood":"medium","detail":"Honest and dishonest drivers alike expect no exceptions."}]}]}},
+{"id":"r2","text":"Cancel the fine","tree":{"label":"Fine cancelled","detail":"You use the emergency exception.","children":[
+ {"label":"Priya keeps her money and her trust in the process","affected":"individual","valence":1,"likelihood":"high","detail":"She sees the system recognise her situation.","children":[
+  {"label":"Staff feel backed when they answer emergencies","affected":"institution","valence":1,"likelihood":"medium","detail":"Word spreads that genuine emergencies are protected.","children":[
+   {"label":"Emergency response stays fast","affected":"community","valence":2,"likelihood":"medium","detail":"Staff keep coming in without fear of a fine."}]}]},
+ {"label":"Others start claiming emergencies","affected":"institution","valence":-1,"likelihood":"medium","detail":"Some drivers copy the argument.","children":[
+  {"label":"The Authority demands stricter proof","affected":"institution","valence":-1,"likelihood":"medium","detail":"Rules tighten in response.","children":[
+   {"label":"Genuine cases face long paperwork","affected":"individual","valence":-2,"likelihood":"low","detail":"Honest drivers pay the price of the abuse."}]}]}]}}],
+"reasons":[
+{"id":"rules","text":"The rule must apply equally to everyone","lens":"Rule-based reasoning","assumption":"Exceptions will be uneven or abused.","failsWhen":"Enforcing the rule defeats the reason it exists.","objection":"Treating unequal situations equally can itself be unfair.","echo":"Many legal systems still excuse a breach in a genuine emergency, an idea called necessity.","alternative":"An outcomes-minded judge would ask what the fine actually achieves here."},
+{"id":"outcomes","text":"What happens next matters more than the wording","lens":"Consequence-based reasoning","assumption":"We can predict the effects reasonably well.","failsWhen":"The predictions are guesses, or the effects fall on people not in the room.","objection":"Judges who chase outcomes become unpredictable, so people cannot plan around the law.","echo":"Public-health rulings often weigh wider effects over strict procedure.","alternative":"A rule-based judge would hold the line so everyone knows where they stand."},
+{"id":"proof","text":"The proof must meet the exception’s test","lens":"Evidence-based reasoning","assumption":"The records are accurate and complete.","failsWhen":"Records are missing, faked, or measure the wrong thing.","objection":"Demanding strong proof burdens people who act honestly in a crisis.","echo":"Courts routinely set different burdens of proof for different questions.","alternative":"A protective judge would give the benefit of the doubt to someone acting for others."},
+{"id":"protect","text":"Protect the people who depend on the service","lens":"Protective reasoning","assumption":"Those who depend on the service are the most at risk.","failsWhen":"Protecting one group quietly shifts costs onto another.","objection":"It can justify bending rules whenever a sympathetic story is told.","echo":"Fire and ambulance services are often given legal exemptions for this reason.","alternative":"A rule-based judge would say a clear exemption belongs in the rule, not in case-by-case mercy."}]
+}
